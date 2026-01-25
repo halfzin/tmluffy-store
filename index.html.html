@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>TM Luffy Store</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #0b1220;
+      color: #ffffff;
+      margin: 0;
+    }
+
+    header {
+      background: #020617;
+      padding: 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    header h1 {
+      color: #facc15;
+      margin: 0;
+    }
+
+    nav a {
+      color: #fff;
+      margin-left: 15px;
+      text-decoration: none;
+    }
+
+    .hero {
+      text-align: center;
+      padding: 80px 20px;
+      background: linear-gradient(135deg, #020617, #1e293b);
+    }
+
+    .hero h2 {
+      font-size: 42px;
+      margin-bottom: 15px;
+    }
+
+    .hero p {
+      max-width: 750px;
+      margin: auto;
+      line-height: 1.6;
+      opacity: 0.9;
+    }
+
+    .btn {
+      display: inline-block;
+      margin-top: 25px;
+      padding: 15px 30px;
+      background: #facc15;
+      color: #000;
+      text-decoration: none;
+      font-weight: bold;
+      border-radius: 6px;
+    }
+
+    .catalog {
+      padding: 40px;
+    }
+
+    .catalog h2 {
+      margin-bottom: 15px;
+    }
+
+    .catalog input {
+      width: 100%;
+      padding: 12px;
+      margin-bottom: 25px;
+      font-size: 16px;
+    }
+
+    .products {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+
+    .card {
+      background: #020617;
+      padding: 20px;
+      border-radius: 10px;
+      transition: transform 0.3s;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+    }
+
+    .price {
+      color: #facc15;
+      font-size: 18px;
+      font-weight: bold;
+      margin: 10px 0;
+    }
+
+    .card button {
+      width: 100%;
+      padding: 12px;
+      background: #22c55e;
+      border: none;
+      font-weight: bold;
+      cursor: pointer;
+      border-radius: 4px;
+    }
+
+    footer {
+      background: #020617;
+      text-align: center;
+      padding: 20px;
+      opacity: 0.7;
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <h1>TM Luffy Store</h1>
+  <nav>
+    <a href="#home">Home</a>
+    <a href="#catalogo">Catálogo</a>
+    <a href="#suporte">Suporte</a>
+  </nav>
+</header>
+
+<!-- HOME -->
+<section class="hero" id="home">
+  <h2>Bem-vindo à TM Luffy Store</h2>
+  <p>
+    Somos da <strong>TM Luffy Store</strong>, uma loja especializada em
+    <strong>Blox Fruits</strong>.
+    Aqui vendemos <strong>frutas físicas</strong>,
+    <strong>contas nível máximo</strong> e também oferecemos
+    <strong>ajuda em eventos do jogo</strong>.
+    <br><br>
+    Confira nosso catálogo e evolua sua gameplay com segurança e rapidez.
+  </p>
+  <a href="#catalogo" class="btn">Ver Catálogo</a>
+</section>
+
+<!-- CATÁLOGO -->
+<section class="catalog" id="catalogo">
+  <h2>Catálogo</h2>
+
+  <input type="text" id="search" placeholder="Buscar produto..." onkeyup="filtrar()">
+
+  <div class="products">
+
+
+    <div class="card">
+      <h3>Ajuda em Evento</h3>
+      <p>Suporte completo em eventos</p>
+      <div class="price">R$ 4,99 ~ R$ 55,99 </div>
+      <button onclick="comprar('Ajuda em Evento')">Comprar</button>
+    </div>
+
+    <div class="card">
+      <h3>Conta Nível Máximo</h3>
+      <p>Conta pronta para PvP e eventos</p>
+      <div class="price">R$ 49,99</div>
+      <button onclick="comprar('Conta Nível Máximo')">Comprar</button>
+    </div>
+
+    <div class="card">
+      <h3>Buddha</h3>
+      <p>Entrega segura no jogo</p>
+      <div class="price">R$ 4,99</div>
+      <button onclick="comprar('Fruta Física')">Comprar</button>
+    </div> 
+
+    <div class="card">
+      <h3>Control</h3>
+      <p>Entrega segura no jogo</p>
+      <div class="price">R$ 11,99</div>
+      <button onclick="comprar('Fruta Física')">Comprar</button>
+    </div>
+
+    <div class="card">
+      <h3>Dragon</h3>
+      <p>Entrega segura no jogo</p>
+      <div class="price">R$ 30,99</div>
+      <button onclick="comprar('Fruta Física')">Comprar</button>
+    </div>
+
+<div class="card">
+      <h3>Dough</h3>
+      <p>Entrega segura no jogo</p>
+      <div class="price">R$ 5,99</div>
+      <button onclick="comprar('Fruta Física')">Comprar</button>
+    </div>
+
+    <div class="card">
+      <h3>Gas</h3>
+      <p>Entrega segura no jogo</p>
+      <div class="price">R$ 9,99</div>
+      <button onclick="comprar('Fruta Física')">Comprar</button>
+    </div>
+
+    <div class="card">
+      <h3>Gravity</h3>
+      <p>Entrega segura no jogo</p>
+      <div class="price">R$ 4,99</div>
+      <button onclick="comprar('Fruta Física')">Comprar</button>
+    </div>
+
+    <div class="card">
+      <h3>Kitsune</h3>
+      <p>Entrega segura no jogo</p>
+      <div class="price">R$ 24,99</div>
+      <button onclick="comprar('Fruta Física')">Comprar</button>
+    </div>
+
+    <div class="card">
+      <h3>Mammuth</h3>
+      <p>Entrega segura no jogo</p>
+      <div class="price">R$ 4,99</div>
+      <button onclick="comprar('Fruta Física')">Comprar</button>
+    </div>
+
+    <div class="card">
+      <h3>Portal</h3>
+      <p>Entrega segura no jogo</p>
+      <div class="price">R$ 7,99</div>
+      <button onclick="comprar('Fruta Física')">Comprar</button>
+    </div>
+
+    <div class="card">
+      <h3>Rumble</h3>
+      <p>Entrega segura no jogo</p>
+      <div class="price">R$ 11,99</div>
+      <button onclick="comprar('Fruta Física')">Comprar</button>
+    </div>
+
+    <div class="card">
+      <h3>Shadow</h3>
+      <p>Entrega segura no jogo</p>
+      <div class="price">R$ 4,99</div>
+      <button onclick="comprar('Fruta Física')">Comprar</button>
+    </div>
+
+    <div class="card">
+      <h3>Spirit</h3>
+      <p>Entrega segura no jogo</p>
+      <div class="price">R$ 7,99</div>
+      <button onclick="comprar('Fruta Física')">Comprar</button>
+    </div>
+
+    <div class="card">
+      <h3>T-rex</h3>
+      <p>Entrega segura no jogo</p>
+      <div class="price">R$ 4,99</div>
+      <button onclick="comprar('Fruta Física')">Comprar</button>
+    </div>
+
+    <div class="card">
+      <h3>Tiger</h3>
+      <p>Entrega segura no jogo</p>
+      <div class="price">R$ 14,99</div>
+      <button onclick="comprar('Fruta Física')">Comprar</button>
+    </div>
+
+    <div class="card">
+      <h3>Vennom</h3>
+      <p>Entrega segura no jogo</p>
+      <div class="price">R$ 7,99</div>
+      <button onclick="comprar('Fruta Física')">Comprar</button>
+    </div>
+
+    <div class="card">
+      <h3>Yeti</h3>
+      <p>Entrega segura no jogo</p>
+      <div class="price">R$ 11,99</div>
+      <button onclick="comprar('Fruta Física')">Comprar</button>
+    </div>
+
+    
+
+  </div>
+</section>
+
+<!-- suporte luffy, se perde nao -->
+<section class="hero" id="suporte">
+  <h2>Suporte</h2>
+  <p>tiktok: tm_luffy7<br>
+     Discord: linkk
+  </p>
+</section>
+
+<footer>
+  © 2026 TM Luffy Store — Todos os direitos reservados
+</footer>
+
+<script>
+  function comprar(produto) {
+    alert(
+      "Produto selecionado: " + produto +
+      "\\n\\nSistema de pagamento ainda não integrado."
+    );
+  }
+
+  function filtrar() {
+    let texto = document.getElementById("search").value.toLowerCase();
+    let cards = document.querySelectorAll(".card");
+
+    cards.forEach(card => {
+      card.style.display = card.innerText.toLowerCase().includes(texto)
+        ? "block"
+        : "none";
+    });
+  }
+</script>
+
+</body>
+</html>
