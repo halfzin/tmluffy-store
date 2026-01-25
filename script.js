@@ -1,10 +1,21 @@
-function comprar(produto) {
-  const discordID = "481601911515119627";
-  const mensagem = `Olá! Vim pelo site TM Luffy Store e quero comprar: ${produto}`;
+function comprar(produto, preco) {
+  const conviteDiscord = "https://discord.gg/XbXrbEFf";
 
-  const link = `https://discord.com/users/${discordID}?message=${encodeURIComponent(mensagem)}`;
+  const mensagem =
+`Olá! Vim pelo site TM Luffy Store 👒🍎
 
-  window.open(link, "_blank");
+🛒 Produto: ${produto}
+💰 Preço: ${preco}
+
+Aguardo atendimento, obrigado!`;
+
+  alert(
+    "Você será redirecionado para nosso Discord.\n\n" +
+    "Copie a mensagem abaixo e envie no atendimento:\n\n" +
+    mensagem
+  );
+
+  window.open(conviteDiscord, "_blank");
 }
 
 function filtrar() {
