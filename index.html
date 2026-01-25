@@ -25,10 +25,9 @@
   <h2>Bem-vindo à TM Luffy Store</h2>
   <p>
     Somos da <strong>TM Luffy Store</strong>, uma loja especializada em
-    <strong>Blox Fruits</strong>.
-    Aqui vendemos <strong>frutas físicas</strong>,
-    <strong>contas nível máximo</strong> e também oferecemos
-    <strong>ajuda em eventos do jogo</strong>.
+    <strong>Blox Fruits</strong>.<br>
+    Vendemos <strong>frutas físicas</strong>, <strong>contas nível máximo</strong>
+    e oferecemos <strong>ajuda em eventos do jogo</strong>.
     <br><br>
     Confira nosso catálogo e evolua sua gameplay com segurança e rapidez.
   </p>
@@ -39,7 +38,12 @@
 <section class="catalog" id="catalogo">
   <h2>Catálogo</h2>
 
-  <input type="text" id="search" placeholder="Buscar produto..." onkeyup="filtrar()">
+  <input
+    type="text"
+    id="search"
+    placeholder="Buscar produto..."
+    onkeyup="filtrar()"
+  >
 
   <div class="products">
 
@@ -47,33 +51,132 @@
       <h3>Ajuda em Evento</h3>
       <p>Suporte completo em eventos</p>
       <div class="price">R$ 4,99 ~ R$ 55,99</div>
-      <button onclick="comprar('Ajuda em Evento')">Comprar</button>
+      <button onclick="comprar('Ajuda em Evento', 'R$ 4,99 ~ R$ 55,99')">
+        Comprar
+      </button>
     </div>
 
     <div class="card">
       <h3>Conta Nível Máximo</h3>
       <p>Conta pronta para PvP e eventos</p>
       <div class="price">R$ 49,99</div>
-      <button onclick="comprar('Conta Nível Máximo')">Comprar</button>
+      <button onclick="comprar('Conta Nível Máximo', 'R$ 49,99')">
+        Comprar
+      </button>
     </div>
 
     <!-- FRUTAS -->
-    <div class="card"><h3>Buddha</h3><p>Entrega segura no jogo</p><div class="price">R$ 4,99</div><button onclick="comprar('Buddha')">Comprar</button></div>
-    <div class="card"><h3>Control</h3><p>Entrega segura no jogo</p><div class="price">R$ 11,99</div><button onclick="comprar('Control')">Comprar</button></div>
-    <div class="card"><h3>Dragon</h3><p>Entrega segura no jogo</p><div class="price">R$ 30,99</div><button onclick="comprar('Dragon')">Comprar</button></div>
-    <div class="card"><h3>Dough</h3><p>Entrega segura no jogo</p><div class="price">R$ 5,99</div><button onclick="comprar('Dough')">Comprar</button></div>
-    <div class="card"><h3>Gas</h3><p>Entrega segura no jogo</p><div class="price">R$ 9,99</div><button onclick="comprar('Gas')">Comprar</button></div>
-    <div class="card"><h3>Gravity</h3><p>Entrega segura no jogo</p><div class="price">R$ 4,99</div><button onclick="comprar('Gravity')">Comprar</button></div>
-    <div class="card"><h3>Kitsune</h3><p>Entrega segura no jogo</p><div class="price">R$ 24,99</div><button onclick="comprar('Kitsune')">Comprar</button></div>
-    <div class="card"><h3>Mammuth</h3><p>Entrega segura no jogo</p><div class="price">R$ 4,99</div><button onclick="comprar('Mammuth')">Comprar</button></div>
-    <div class="card"><h3>Portal</h3><p>Entrega segura no jogo</p><div class="price">R$ 7,99</div><button onclick="comprar('Portal')">Comprar</button></div>
-    <div class="card"><h3>Rumble</h3><p>Entrega segura no jogo</p><div class="price">R$ 11,99</div><button onclick="comprar('Rumble')">Comprar</button></div>
-    <div class="card"><h3>Shadow</h3><p>Entrega segura no jogo</p><div class="price">R$ 4,99</div><button onclick="comprar('Shadow')">Comprar</button></div>
-    <div class="card"><h3>Spirit</h3><p>Entrega segura no jogo</p><div class="price">R$ 7,99</div><button onclick="comprar('Spirit')">Comprar</button></div>
-    <div class="card"><h3>T-Rex</h3><p>Entrega segura no jogo</p><div class="price">R$ 4,99</div><button onclick="comprar('T-Rex')">Comprar</button></div>
-    <div class="card"><h3>Tiger</h3><p>Entrega segura no jogo</p><div class="price">R$ 14,99</div><button onclick="comprar('Tiger')">Comprar</button></div>
-    <div class="card"><h3>Venom</h3><p>Entrega segura no jogo</p><div class="price">R$ 7,99</div><button onclick="comprar('Venom')">Comprar</button></div>
-    <div class="card"><h3>Yeti</h3><p>Entrega segura no jogo</p><div class="price">R$ 11,99</div><button onclick="comprar('Yeti')">Comprar</button></div>
+    <div class="card">
+      <h3>Buddha</h3>
+      <p>Entrega segura no jogo</p>
+      <div class="price">R$ 4,99</div>
+      <button onclick="comprar('Buddha', 'R$ 4,99')">Comprar</button>
+    </div>
+
+    <div class="card">
+      <h3>Control</h3>
+      <p>Entrega segura no jogo</p>
+      <div class="price">R$ 11,99</div>
+      <button onclick="comprar('Control', 'R$ 11,99')">Comprar</button>
+    </div>
+
+    <div class="card">
+      <h3>Dragon</h3>
+      <p>Entrega segura no jogo</p>
+      <div class="price">R$ 30,99</div>
+      <button onclick="comprar('Dragon', 'R$ 30,99')">Comprar</button>
+    </div>
+
+    <div class="card">
+      <h3>Dough</h3>
+      <p>Entrega segura no jogo</p>
+      <div class="price">R$ 5,99</div>
+      <button onclick="comprar('Dough', 'R$ 5,99')">Comprar</button>
+    </div>
+
+    <div class="card">
+      <h3>Gas</h3>
+      <p>Entrega segura no jogo</p>
+      <div class="price">R$ 9,99</div>
+      <button onclick="comprar('Gas', 'R$ 9,99')">Comprar</button>
+    </div>
+
+    <div class="card">
+      <h3>Gravity</h3>
+      <p>Entrega segura no jogo</p>
+      <div class="price">R$ 4,99</div>
+      <button onclick="comprar('Gravity', 'R$ 4,99')">Comprar</button>
+    </div>
+
+    <div class="card">
+      <h3>Kitsune</h3>
+      <p>Entrega segura no jogo</p>
+      <div class="price">R$ 24,99</div>
+      <button onclick="comprar('Kitsune', 'R$ 24,99')">Comprar</button>
+    </div>
+
+    <div class="card">
+      <h3>Mammuth</h3>
+      <p>Entrega segura no jogo</p>
+      <div class="price">R$ 4,99</div>
+      <button onclick="comprar('Mammuth', 'R$ 4,99')">Comprar</button>
+    </div>
+
+    <div class="card">
+      <h3>Portal</h3>
+      <p>Entrega segura no jogo</p>
+      <div class="price">R$ 7,99</div>
+      <button onclick="comprar('Portal', 'R$ 7,99')">Comprar</button>
+    </div>
+
+    <div class="card">
+      <h3>Rumble</h3>
+      <p>Entrega segura no jogo</p>
+      <div class="price">R$ 11,99</div>
+      <button onclick="comprar('Rumble', 'R$ 11,99')">Comprar</button>
+    </div>
+
+    <div class="card">
+      <h3>Shadow</h3>
+      <p>Entrega segura no jogo</p>
+      <div class="price">R$ 4,99</div>
+      <button onclick="comprar('Shadow', 'R$ 4,99')">Comprar</button>
+    </div>
+
+    <div class="card">
+      <h3>Spirit</h3>
+      <p>Entrega segura no jogo</p>
+      <div class="price">R$ 7,99</div>
+      <button onclick="comprar('Spirit', 'R$ 7,99')">Comprar</button>
+    </div>
+
+    <div class="card">
+      <h3>T-Rex</h3>
+      <p>Entrega segura no jogo</p>
+      <div class="price">R$ 4,99</div>
+      <button onclick="comprar('T-Rex', 'R$ 4,99')">Comprar</button>
+    </div>
+
+    <div class="card">
+      <h3>Tiger</h3>
+      <p>Entrega segura no jogo</p>
+      <div class="price">R$ 14,99</div>
+      <button onclick="comprar('Tiger', 'R$ 14,99')">Comprar</button>
+    </div>
+
+    <div class="card">
+      <h3>Venom</h3>
+      <p>Entrega segura no jogo</p>
+      <div class="price">R$ 7,99</div>
+      <button onclick="comprar('Venom', 'R$ 7,99')">Comprar</button>
+    </div>
+
+    <div class="card">
+      <h3>Yeti</h3>
+      <p>Entrega segura no jogo</p>
+      <div class="price">R$ 11,99</div>
+      <button onclick="comprar('Yeti', 'R$ 11,99')">Comprar</button>
+    </div>
 
   </div>
 </section>
@@ -83,7 +186,7 @@
   <h2>Suporte</h2>
   <p>
     TikTok: tm_luffy7 <br>
-    Discord: linkk
+    Discord: atendimento via botão de compra
   </p>
 </section>
 
