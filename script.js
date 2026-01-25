@@ -1,8 +1,10 @@
 function comprar(produto) {
-  alert(
-    "Produto selecionado: " + produto +
-    "\n\nSistema de pagamento ainda não integrado."
-  );
+  const discordID = "481601911515119627";
+  const mensagem = `Olá! Vim pelo site TM Luffy Store e quero comprar: ${produto}`;
+
+  const link = `https://discord.com/users/${discordID}?message=${encodeURIComponent(mensagem)}`;
+
+  window.open(link, "_blank");
 }
 
 function filtrar() {
