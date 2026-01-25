@@ -1,5 +1,5 @@
 function comprar(produto, preco) {
-  const whatsapp = "5581987083004";
+  const whatsapp = "5573988666449";
 
   const mensagem =
     "Olá! Vim pela TM Luffy Store 👒🍎\n\n" +
@@ -15,3 +15,4 @@ function comprar(produto, preco) {
 
   window.open(link, "_blank");
 }
+
