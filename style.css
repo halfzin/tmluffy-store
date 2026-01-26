@@ -197,6 +197,16 @@ footer {
 .card button {
   animation: pulse 2.8s infinite;
 }
+.card button {
+  position: relative;
+  z-index: 10;
+}
+
+.card::before {
+  pointer-events: none;
+}
+
+
 
 
 
