@@ -8,11 +8,10 @@ function comprar(produto, preco) {
     "Gostaria de realizar a compra.";
 
   const link =
-    "https://api.whatsapp.com/send?phone=" +
+    "https://wa.me/" +
     whatsapp +
-    "&text=" +
+    "?text=" +
     encodeURIComponent(mensagem);
 
   window.open(link, "_blank");
 }
-
