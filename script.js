@@ -23,12 +23,13 @@ function filtrar() {
   const cards = document.querySelectorAll(".card");
 
   cards.forEach(card => {
-    const nomeProduto = card.querySelector("h3").innerText.toLowerCase();
+    const nomeProduto = card.querySelector("h3").textContent.toLowerCase();
 
     if (nomeProduto.includes(filtro)) {
-      card.style.display = "block";
+      card.style.display = "";
     } else {
       card.style.display = "none";
     }
   });
 }
+
