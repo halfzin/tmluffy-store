@@ -16,7 +16,7 @@ function comprar(produto, preco) {
   window.open(link, "_blank");
 }
 
-//  FUNÇÃO DE BUSCA DO CATÁLOGO
+// 🔍 FUNÇÃO DE BUSCA DO CATÁLOGO
 function filtrar() {
   const input = document.getElementById("search");
   const filtro = input.value.toLowerCase();
