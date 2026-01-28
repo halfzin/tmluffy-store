@@ -7,29 +7,22 @@ function comprar(produto, preco) {
     "💰 Preço: " + preco + "\n\n" +
     "Gostaria de realizar a compra.";
 
-  const link =
-    "https://wa.me/" +
-    whatsapp +
-    "?text=" +
-    encodeURIComponent(mensagem);
-
-  window.open(link, "_blank");
+  window.open(
+    "https://wa.me/" + whatsapp + "?text=" + encodeURIComponent(mensagem),
+    "_blank"
+  );
 }
 
-// 🔍 FUNÇÃO DE BUSCA DO CATÁLOGO
-function filtrar() {
+document.addEventListener("DOMContentLoaded", () => {
   const input = document.getElementById("search");
-  const filtro = input.value.toLowerCase();
   const cards = document.querySelectorAll(".card");
 
-  cards.forEach(card => {
-    const nomeProduto = card.querySelector("h3").textContent.toLowerCase();
+  input.addEventListener("input", () => {
+    const filtro = input.value.toLowerCase();
 
-    if (nomeProduto.includes(filtro)) {
-      card.style.display = "";
-    } else {
-      card.style.display = "none";
-    }
+    cards.forEach(card => {
+      const texto = card.innerText.toLowerCase();
+      card.style.display = texto.includes(filtro) ? "" : "none";
+    });
   });
-}
-
+});
